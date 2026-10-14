@@ -1,0 +1,5 @@
+
+OfficeActivity
+| where Operation == "FileRenamed"
+| where RecordType == "SharePointFileOperation"
+| project TimeGenerated, UserId, OfficeObjectId, Operation, RecordType
